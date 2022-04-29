@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f9f9f9;
+  padding: 20px 10px;
+  align-items: center;
+}
+
+.heading-icon {
+  color: rgb(49, 48, 48);
+}
+
+.jelly {
+  height: 40px;
+}

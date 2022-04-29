@@ -1,0 +1,27 @@
+.cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.explain {
+  font-size: small;
+  text-align: center;
+  padding-top: 20px;
+  margin: 0px 20px;
+}
+
+.mara {
+  max-height: 300px;
+  max-width: 300px;
+  filter: drop-shadow(-5px -5px 5px rgb(146, 146, 146));
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+}
