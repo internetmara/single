@@ -4,7 +4,7 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import CloseIcon from '@mui/icons-material/Close';
 import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import BoltIcon from '@mui/icons-material/Bolt';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 function handleClose() {
   alert("you can't cancel me, only god can judge me.")
@@ -17,7 +17,7 @@ const Buttons = () => {
       <CloseIcon className="close button" onClick={handleClose}/>
       <StarIcon className="primary button"/>
       <FavoriteIcon className="favorite button" />
-      <BoltIcon className="bolt button"/>
+      <a href="https://www.venmo.com/jellymara"><AttachMoneyIcon className="money button"/></a>
     </div>
   )
 }

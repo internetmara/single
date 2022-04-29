@@ -1,22 +1,25 @@
-import mara from './mara.jpg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Cards from './components/Cards';
-import Buttons from './components/Buttons';
+import About from './components/About';
+import Home from './components/Home';
 import Footer from './components/Footer';
+import Chat from './components/Chat';
 import './stylesheets/reset.css';
 import './App.css';
+import React from 'react';
 
 function App() {
   return (
     <div className='content'>
-      <div className="content-inside">
-        <Header/>
-        <Cards/>
-        <Buttons/>
-      </div>
-      <div className='footer'>
+      <Header/>
+      <Router>
+        <Routes>
+          <Route path="/chat" element={<Chat/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
         <Footer/>
-      </div>
+      </Router>
     </div>
   );
 }
