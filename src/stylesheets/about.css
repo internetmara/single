@@ -1,19 +1,22 @@
 .about {
-  color: rgb(45, 45, 45);  
+  color: rgb(62, 62, 62);  
+  height: 100%;
 }
+
 .title {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   padding-top: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: 60vh;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .explain {
@@ -23,16 +26,26 @@
 }
 
 .me {
-  font-size: 25px;
+  font-size: 40px;
   font-weight: 700;
 }
 
 .explain-2 {
   font-size: 14px;
   text-align: center;
-  margin: 10px 20px;
+  margin: 10px 10px;
+}
+
+.dev-pic {
+  border-radius: 20%;
+  object-fit: cover;
+  margin-top: 20px;
+  height: 200px;
+  overflow: hidden;
+  object-position: 50% 50%;
 }
 
 .explain-3 {
-  margin-top: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

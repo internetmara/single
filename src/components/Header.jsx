@@ -1,36 +1,57 @@
 import React from "react";
-import PersonIcon from '@mui/icons-material/Person';
+// import PersonIcon from '@mui/icons-material/Person';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import ForumIcon from '@mui/icons-material/Forum';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Jelly from '../jelly.png'
 import '../stylesheets/header.css';
 import { Link, useNavigate } from "react-router-dom";
 
-const Header = ({backButton}) => {
+const Header = (props) => {
   const navigate = useNavigate();
+  let leftButton;
+  if (props.leftButton === "x") {
+    leftButton = 
+      <Link to="/">
+        <IconButton>
+          <CloseIcon fontSize="large"/>
+        </IconButton>
+      </Link>
+  } else if (props.leftButton === '<') {
+    leftButton = 
+    <IconButton onClick={() => navigate(-1)}>
+      <ArrowBackIosIcon fontSize="large" />
+    </IconButton>
+  } else {
+    leftButton = 
+      <Link to="/about">
+        <IconButton>
+          <HelpOutlineIcon fontSize="large" />
+        </IconButton>
+      </Link>
+  }
+
   return (
     <div className="header">
-      {backButton ? (
-          <IconButton onClick={() => navigate(-1)}>
-            <CloseIcon fontSize="large"/>
-          </IconButton>
-        ) : (
-          <Link to="/about">
-          <IconButton>
-            <PersonIcon fontSize="large" />
-          </IconButton>
-        </Link>
-        )
-      }
+      {leftButton}
       <Link to='/'>
         <img className="jelly" alt="Jelly" src={Jelly}/>
       </Link>
-      <Link to='/chats'>
+      {props.rightButton ? (
+        <Link to="/about">
         <IconButton>
-          <ForumIcon fontSize="large" />
+          <HelpOutlineIcon fontSize="large" />
         </IconButton>
       </Link>
+      ) : (
+        <Link to='/chats'>
+          <IconButton>
+            <ForumIcon fontSize="large" />
+          </IconButton>
+        </Link>
+      )}
     </div>
   )
 }

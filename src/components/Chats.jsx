@@ -6,7 +6,7 @@ import '../stylesheets/chats.css';
 const Chats = () => {
   return (
     <div className="chats">
-      <Header backButton="/" />
+      <Header leftButton="<" rightButton="?" />
       <div className="chat-list">
         <Chat
           name="Jacob"

@@ -1,0 +1,29 @@
+.chat-screen-header {
+  padding: 20px;
+  color: gray;
+  font-size: small;
+}
+
+.their-message {
+  margin-left: 10px;
+  background-color: lightgray;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: left;
+  color: black;
+}
+
+.chat-screen-message {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.my-reply {
+  margin-left: auto;
+  background-color: rgb(2, 173, 173);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: right;
+  color: black;
+}

@@ -5,6 +5,7 @@
   height: 70px;
   justify-content: space-between;
   align-items: center;
+  color: black;
 }
 
 .chat-name {
@@ -24,6 +25,7 @@
   padding: 20px 0px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .left-text {
